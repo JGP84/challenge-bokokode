@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
+import Header from "../components/Header";
 
 const Container = styled.div`
  /*  display: flex;
@@ -20,13 +21,14 @@ const Line = styled.hr`
   width: 1281px;
   
 
-  border: 4px solid #e4e4e4;
+  border: 2px solid #e4e4e4;
 `;
 const Home = () => {
   return (
     <Container>
       <Navbar />
       <Line />
+      <Header />
     </Container>
   );
 };
