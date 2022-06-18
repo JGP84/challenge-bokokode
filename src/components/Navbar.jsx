@@ -6,7 +6,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-position: relative;
+/* position: relative; */
   padding: 37px 68px 33px 0px;
   display: flex;
   align-items: center;

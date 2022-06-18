@@ -15,12 +15,8 @@ const Container = styled.div`
 `;
 
 const Line = styled.hr`
- 
-  margin-bottom: 58px;
   margin-left: 92px; 
   width: 1281px;
-  
-
   border: 2px solid #e4e4e4;
 `;
 const Home = () => {
@@ -29,6 +25,7 @@ const Home = () => {
       <Navbar />
       <Line />
       <Header />
+      <Line />
     </Container>
   );
 };

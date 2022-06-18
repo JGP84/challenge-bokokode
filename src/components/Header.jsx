@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   /* position: relative; */
   max-width: 1282px;
+  margin-top: 58px;
   margin-left: 90px;
   /* padding: 37px 68px 33px 0px; */
   display: flex;
@@ -23,9 +24,9 @@ const TitleHeader = styled.text`
   color: #000000;
 `;
 const Button = styled.button`
-  /* width: 257px;
-  height: 47px; */
-  padding: 13px 39px;
+  width: 257px;
+  height: 47px;
+  padding: 9.5px 39px 5.5px 39px;
   font-family: "Archivo";
   font-style: normal;
   font-weight: 500;
@@ -35,10 +36,17 @@ const Button = styled.button`
   background: #000000;
   color: #ffffff;
   text-transform: uppercase;
-  text-align: center;
+  /* text-align: center; */
+  /* display: flex;
+justify-content: center;
+align-items: center; */
 `;
 
+const WrapperImg =styled.div` 
+background: red;
+`
 const ImgFeaturedProduct = styled.img`
+position: relative;
   margin-top: 27px;
   margin-left: 82px;
   margin-bottom: 46px;
@@ -48,9 +56,13 @@ position: absolute;
 width: 271.95px;
 height: 67px;
 left: 82px;
-top: 742px;
+top: 746px;
+/* bottom: 0px; */
 background: #FFFFFF;
-text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+
 `
 
 const WrapperDescriptionFeatured = styled.div`
@@ -110,6 +122,7 @@ const ContainerFlex = styled.div`
   justify-content: space-between;
   max-width: 1280px;
   margin-left: 92px;
+  margin-bottom: 75px;
   /* background: red; */
 `;
 
@@ -158,10 +171,14 @@ const Header = () => {
         <TitleHeader>samurai king resting</TitleHeader>
         <Button>add to cart</Button>
       </Wrapper>
-      <ImgFeaturedProduct src="/images/featured-product.png" />
+
+      <WrapperImg>
+      <ImgFeaturedProduct src="/images/featured-product.png"/>
+
       <ContainerTitlePhotoDay>
         <Title sytle={{fontSize: "20px"}}>Photo of the day</Title>
       </ContainerTitlePhotoDay>
+      </WrapperImg>
 
       <ContainerFlex>
         <WrapperDescriptionFeatured>
