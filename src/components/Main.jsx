@@ -29,7 +29,10 @@ const TitleSorts = styled.text`
 `;
 
 const Row = styled.div`
+max-width: 1266px;
   display: flex;
+  margin-left: 97px;
+  background: blue;
 `;
 
 const ColumnCheckboxes = styled.div`
@@ -37,8 +40,10 @@ const ColumnCheckboxes = styled.div`
   flex-direction: column;
 `;
 const Checkbox = styled.div`
+  max-width: 327px;
   display: flex;
   flex-direction: column;
+  background: red;
 `;
 
 const GridProducts = styled.div`
@@ -62,8 +67,8 @@ const Main = () => {
 
       <Row>
         <ColumnCheckboxes>
-          <Checkbox></Checkbox>
-          <Checkbox></Checkbox>
+          <Checkbox>3</Checkbox>
+          <Checkbox>3</Checkbox>
         </ColumnCheckboxes>
         <GridProducts></GridProducts>
       </Row>
