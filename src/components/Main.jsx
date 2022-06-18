@@ -31,6 +31,7 @@ const TitleSorts = styled.text`
 const Row = styled.div`
 max-width: 1266px;
   display: flex;
+  justify-content: end;
   margin-left: 97px;
   background: blue;
 `;
@@ -48,7 +49,20 @@ const Checkbox = styled.div`
 
 const GridProducts = styled.div`
   display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fill, minmax(283.02px, 1fr));
+  gap: 48px; 
+  
 `;
+
+const CardProduct = styled.div` 
+width: 283.02px;
+height: 514px;
+background-color: green;
+color: white;
+font-size: 32px;
+text-align: center;
+`
 
 const Main = () => {
   return (
@@ -70,7 +84,14 @@ const Main = () => {
           <Checkbox>3</Checkbox>
           <Checkbox>3</Checkbox>
         </ColumnCheckboxes>
-        <GridProducts></GridProducts>
+        <GridProducts>
+        <CardProduct>1</CardProduct>
+        <CardProduct>2</CardProduct>
+        <CardProduct>3</CardProduct>
+        <CardProduct>4</CardProduct>
+        <CardProduct>5</CardProduct>
+        <CardProduct>6</CardProduct>
+        </GridProducts>
       </Row>
     </>
   );
