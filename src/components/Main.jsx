@@ -7,6 +7,7 @@ const WrapperHeader = styled.div`
   max-width: 1266px;
   margin-left: 97px;
   margin-top: 68px;
+  margin-bottom: 59px;
 `;
 const WrapperTitleCategory = styled.div``;
 
@@ -50,9 +51,12 @@ const Checkbox = styled.div`
 const GridProducts = styled.div`
   display: grid;
   /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: repeat(auto-fill, minmax(283.02px, 1fr));
-  gap: 48px; 
-  
+  /* grid-template-columns: repeat(auto-fill, minmax(283.02px, 1fr));
+  gap: 48px;  */
+  grid-template-columns: repeat(3, 283.02px);
+  grid-template-rows: repeat(2, 514px);
+  column-gap: 48px;
+  row-gap: 52.55px;
 `;
 
 const CardProduct = styled.div` 
