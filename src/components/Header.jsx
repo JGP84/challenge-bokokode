@@ -42,14 +42,12 @@ justify-content: center;
 align-items: center; */
 `;
 
-const WrapperImg =styled.div` 
-background: red;
-`
+
 const ImgFeaturedProduct = styled.img`
 position: relative;
   margin-top: 27px;
   margin-left: 82px;
-  margin-bottom: 46px;
+
 `;
 const ContainerTitlePhotoDay = styled.div` 
 position: absolute;
@@ -122,6 +120,7 @@ const ContainerFlex = styled.div`
   justify-content: space-between;
   max-width: 1280px;
   margin-left: 92px;
+  margin-top: 42px;
   margin-bottom: 75px;
   /* background: red; */
 `;
@@ -172,13 +171,13 @@ const Header = () => {
         <Button>add to cart</Button>
       </Wrapper>
 
-      <WrapperImg>
+      
       <ImgFeaturedProduct src="/images/featured-product.png"/>
 
       <ContainerTitlePhotoDay>
         <Title sytle={{fontSize: "20px"}}>Photo of the day</Title>
       </ContainerTitlePhotoDay>
-      </WrapperImg>
+      
 
       <ContainerFlex>
         <WrapperDescriptionFeatured>
