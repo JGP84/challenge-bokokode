@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import Header from "../components/Header";
+import Main from "../components/Main";
 
 const Container = styled.div`
  /*  display: flex;
@@ -26,6 +27,7 @@ const Home = () => {
       <Line />
       <Header />
       <Line />
+      <Main/>
     </Container>
   );
 };
