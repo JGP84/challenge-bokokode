@@ -30,11 +30,11 @@ const TitleSorts = styled.text`
 `;
 
 const Row = styled.div`
-max-width: 1266px;
+  max-width: 1266px;
   display: flex;
   justify-content: end;
   margin-left: 97px;
-  background: blue;
+  /*  background: blue; */
 `;
 
 const ColumnCheckboxes = styled.div`
@@ -45,7 +45,7 @@ const Checkbox = styled.div`
   max-width: 327px;
   display: flex;
   flex-direction: column;
-  background: red;
+  /* background: red; */
 `;
 
 const GridProducts = styled.div`
@@ -59,14 +59,84 @@ const GridProducts = styled.div`
   row-gap: 52.55px;
 `;
 
-const CardProduct = styled.div` 
-width: 283.02px;
-height: 514px;
-background-color: green;
-color: white;
-font-size: 32px;
-text-align: center;
-`
+const CardProduct = styled.div`
+  width: 283.02px;
+  height: 514px;
+  /* background-color: green; */
+  color: white;
+  font-size: 32px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-center;
+`;
+const ButtonCart = styled.button`
+  width: 100%;
+  height: 46px;
+  background: #000000;
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+`;
+
+const ImgProduct = styled.img`
+  width: 283.02px;
+  height: 352.72px;
+  object-fit: cover;
+`;
+const WrapperText = styled.div`
+  width: 283.02px;
+  /* height: 115,98px; */
+  height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-space-evenly;
+  align-items: flex-start;
+  gap: 8px;
+
+  /* background: red; */
+`;
+const TextCategory = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  margin-top: 8px;
+  text-transform: capitalize;
+  /* identical to box height */
+
+  color: #656565;
+`;
+
+const TextProduct = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 37px;
+  text-transform: capitalize;
+  /* identical to box height */
+
+  color: #000000;
+`;
+const TextPrice = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 32px;
+  /* identical to box height */
+
+  color: #656565;
+`;
 
 const Main = () => {
   return (
@@ -85,16 +155,64 @@ const Main = () => {
 
       <Row>
         <ColumnCheckboxes>
-          <Checkbox>3</Checkbox>
-          <Checkbox>3</Checkbox>
+          <Checkbox></Checkbox>
+          <Checkbox></Checkbox>
         </ColumnCheckboxes>
         <GridProducts>
-        <CardProduct>1</CardProduct>
-        <CardProduct>2</CardProduct>
-        <CardProduct>3</CardProduct>
-        <CardProduct>4</CardProduct>
-        <CardProduct>5</CardProduct>
-        <CardProduct>6</CardProduct>
+          <CardProduct>
+            <ImgProduct src="/images/red-bench.png" alt="product" />
+            <ButtonCart>add to cart</ButtonCart>
+            <WrapperText>
+              <TextCategory>people</TextCategory>
+              <TextProduct>red bench</TextProduct>
+              <TextPrice>&#36;3.89</TextPrice>
+            </WrapperText>
+          </CardProduct>
+          <CardProduct>
+            <ImgProduct src="/images/red-bench.png" alt="product" />
+            <ButtonCart>add to cart</ButtonCart>
+            <WrapperText>
+              <TextCategory>people</TextCategory>
+              <TextProduct>red bench</TextProduct>
+              <TextPrice>&#36;3.89</TextPrice>
+            </WrapperText>
+          </CardProduct>
+          <CardProduct>
+            <ImgProduct src="/images/red-bench.png" alt="product" />
+            <ButtonCart>add to cart</ButtonCart>
+            <WrapperText>
+              <TextCategory>people</TextCategory>
+              <TextProduct>red bench</TextProduct>
+              <TextPrice>&#36;3.89</TextPrice>
+            </WrapperText>
+          </CardProduct>
+          <CardProduct>
+            <ImgProduct src="/images/red-bench.png" alt="product" />
+            <ButtonCart>add to cart</ButtonCart>
+            <WrapperText>
+              <TextCategory>people</TextCategory>
+              <TextProduct>red bench</TextProduct>
+              <TextPrice>&#36;3.89</TextPrice>
+            </WrapperText>
+          </CardProduct>
+          <CardProduct>
+            <ImgProduct src="/images/red-bench.png" alt="product" />
+            <ButtonCart>add to cart</ButtonCart>
+            <WrapperText>
+              <TextCategory>people</TextCategory>
+              <TextProduct>red bench</TextProduct>
+              <TextPrice>&#36;3.89</TextPrice>
+            </WrapperText>
+          </CardProduct>
+          <CardProduct>
+            <ImgProduct src="/images/red-bench.png" alt="product" />
+            <ButtonCart>add to cart</ButtonCart>
+            <WrapperText>
+              <TextCategory>people</TextCategory>
+              <TextProduct>red bench</TextProduct>
+              <TextPrice>&#36;3.89</TextPrice>
+            </WrapperText>
+          </CardProduct>
         </GridProducts>
       </Row>
     </>
