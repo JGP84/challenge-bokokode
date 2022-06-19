@@ -137,6 +137,31 @@ const TextPrice = styled.text`
 
   color: #656565;
 `;
+const WrapperBestSeller = styled.div`
+  position: absolute;
+  width: 127.4px;
+  height: 29.17px;
+  left: 417px;
+  top: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+
+
+  background: #ffffff;
+`;
+const TextBestSeller = styled.text`
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  text-transform: capitalize;
+
+
+  color: #000000;
+`;
 
 const Main = () => {
   return (
@@ -187,7 +212,10 @@ const Main = () => {
             </WrapperText>
           </CardProduct>
           <CardProduct>
-            <ImgProduct src="/images/red-bench.png" alt="product" />
+            <WrapperBestSeller>
+              <TextBestSeller>best seller</TextBestSeller>
+            </WrapperBestSeller>
+            <ImgProduct src="/images/red-bench.png" alt="product"></ImgProduct>
             <ButtonCart>add to cart</ButtonCart>
             <WrapperText>
               <TextCategory>people</TextCategory>
