@@ -1,5 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Checkbox from "./Checkbox";
+
+
+// Responsive
+const media = {
+mobile: '@media(max-width: 414px)'
+} 
 
 const WrapperHeader = styled.div`
   display: flex;
@@ -32,7 +39,7 @@ const TitleSorts = styled.text`
 const Row = styled.div`
   max-width: 1266px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   margin-left: 97px;
   /*  background: blue; */
 `;
@@ -40,23 +47,42 @@ const Row = styled.div`
 const ColumnCheckboxes = styled.div`
   display: flex;
   flex-direction: column;
+  background: red;
+  width: 300px;
+
+  ${media.mobile}{
+    width: 0px;
+  }
+ 
 `;
-const Checkbox = styled.div`
+const WrapperCheckbox = styled.div`
   max-width: 327px;
   display: flex;
   flex-direction: column;
-  /* background: red; */
+  background: yellow;
 `;
 
 const GridProducts = styled.div`
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* grid-template-columns: repeat(auto-fill, minmax(283.02px, 1fr));
-  gap: 48px;  */
+  /* gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */
+  /* grid-auto-rows: 514px;
+  grid-template-columns: repeat(auto-fill, minmax(283.02px, 1fr)); */
   grid-template-columns: repeat(3, 283.02px);
-  grid-template-rows: repeat(2, 514px);
+ /*  grid-template-columns: repeat(auto-fill, minmax( 1fr, 283.02px)); */
+  /* grid-template-columns: repeat(auto-fill, minmax( 200px, auto)); */
+ /*  grid-template-columns: repeat(auto-fill, minmax( 200px, 1fr)); */
+  /* grid-template-rows: repeat(2, 514px);  */
+  grid-auto-rows: 514px;
   column-gap: 48px;
   row-gap: 52.55px;
+
+  ${media.mobile}{
+    grid-template-columns: 1fr;
+    grid-template-rows: 362px; 
+    row-gap: 40px;
+  }
 `;
 
 const CardProduct = styled.div`
@@ -69,6 +95,11 @@ const CardProduct = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-center;
+
+  ${media.mobile}{
+    width: 362px;
+  height: 661px;
+  }
 `;
 const ButtonCart = styled.button`
   width: 100%;
@@ -90,6 +121,12 @@ const ImgProduct = styled.img`
   width: 283.02px;
   height: 352.72px;
   object-fit: cover;
+
+  ${media.mobile}{
+    width: 362px;
+  height: 661px;
+  object-fit: cover;
+  }
 `;
 const WrapperText = styled.div`
   width: 283.02px;
@@ -148,7 +185,6 @@ const WrapperBestSeller = styled.div`
   align-items: center;
   margin-top: 6px;
 
-
   background: #ffffff;
 `;
 const TextBestSeller = styled.text`
@@ -159,11 +195,12 @@ const TextBestSeller = styled.text`
   line-height: 22px;
   text-transform: capitalize;
 
-
   color: #000000;
 `;
 
 const Main = () => {
+  const [value, setCheckbox] = useState(true);
+
   return (
     <>
       <WrapperHeader>
@@ -180,8 +217,34 @@ const Main = () => {
 
       <Row>
         <ColumnCheckboxes>
-          <Checkbox></Checkbox>
-          <Checkbox></Checkbox>
+          {/* <Checkbox>
+            
+          </Checkbox> */}
+          {/* <WrapperCheckbox>
+            <input
+              type="checkbox"
+              id="coding"
+              name="interest"
+              value="coding"
+              checked
+            ></input>
+          </WrapperCheckbox> */}
+          <WrapperCheckbox>
+          <Checkbox
+              label="value"
+              value={value}
+              checked={value}
+              onChange={({ target }) => setCheckbox(!value)}
+            />
+          </WrapperCheckbox>
+
+          {/*  <Checkbox
+              label="value"
+              value={value}
+              checked={value}
+              onChange={({ target }) => setCheckbox(!value)}
+            /> */}
+          {/* <Checkbox>1</Checkbox> */}
         </ColumnCheckboxes>
         <GridProducts>
           <CardProduct>
