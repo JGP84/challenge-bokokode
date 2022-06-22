@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Checkbox from "./Checkbox";
+import responsive from "../responsive.js"
 
 
 // Responsive
@@ -78,7 +79,7 @@ const GridProducts = styled.div`
   column-gap: 48px;
   row-gap: 52.55px;
 
-  ${media.mobile}{
+  ${responsive.mobile}{
     grid-template-columns: 1fr;
     grid-template-rows: 362px; 
     row-gap: 40px;
