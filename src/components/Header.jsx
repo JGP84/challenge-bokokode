@@ -49,19 +49,7 @@ position: relative;
   margin-left: 82px;
 
 `;
-const ContainerTitlePhotoDay = styled.div` 
-position: absolute;
-width: 271.95px;
-height: 67px;
-left: 82px;
-top: 746px;
-/* bottom: 0px; */
-background: #FFFFFF;
-display: flex;
-justify-content: center;
-align-items: center;
 
-`
 
 const WrapperDescriptionFeatured = styled.div`
   /* position: relative; */

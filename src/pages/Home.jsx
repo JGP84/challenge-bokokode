@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import styled from "styled-components";
-import Header from "../components/Header";
+import Header2 from "../components/Header2";
 import Main from "../components/Main";
 
 const Container = styled.div`
@@ -25,9 +25,9 @@ const Home = () => {
     <Container>
       <Navbar />
       <Line />
-      <Header />
-      <Line />
-      <Main/>
+      <Header2 />
+     {/*  <Line /> */}
+      {/* <Main/> */}
     </Container>
   );
 };
