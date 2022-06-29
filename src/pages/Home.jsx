@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import Header2 from "../components/Header2";
 import Main from "../components/Main";
+import useFetch from "../useFetch";
 
 const Container = styled.div`
  /*  display: flex;
@@ -21,11 +22,31 @@ const Line = styled.hr`
   border: 2px solid #e4e4e4;
 `;
 const Home = () => {
+
+  const { data: data, loading, error, refetch } = useFetch(
+    "https://technical-frontend-api.bokokode.com/api/products"
+  );
+
+  if (loading) return <h1> LOADING...</h1>;
+
+  if (error) console.log(error);
+
+
+
   return (
+
+
+    
     <Container>
-      <Navbar />
-      <Line />
-      <Header2 />
+       <h1>
+        {data.data.data[0].name}
+      </h1>
+
+      <button onClick={refetch}> Refetch</button>
+
+     {/*  <Navbar />
+      <Line /> */}
+     {/*  <Header2 /> */}
      {/*  <Line /> */}
       {/* <Main/> */}
     </Container>
