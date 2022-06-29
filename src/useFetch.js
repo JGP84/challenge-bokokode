@@ -36,7 +36,18 @@ function useFetch( url) {
       });
   };
 
-  return { data, loading, error, refetch };
+  const getFeaturedProduct  = () => {
+
+    const products = data.data.data
+
+    const result = products.filter( product => product.featured === true )
+
+    /* const result = data */
+    console.log( "result", result)
+  
+  } 
+
+  return { data, loading, error, refetch, getFeaturedProduct };
 }
 
 export default useFetch;

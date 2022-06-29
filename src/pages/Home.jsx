@@ -21,9 +21,12 @@ const Line = styled.hr`
   width: 1281px;
   border: 2px solid #e4e4e4;
 `;
+
+
+
 const Home = () => {
 
-  const { data: data, loading, error, refetch } = useFetch(
+  const { data: data, loading, error, refetch, getFeaturedProduct } = useFetch(
     "https://technical-frontend-api.bokokode.com/api/products"
   );
 
@@ -41,8 +44,14 @@ const Home = () => {
        <h1>
         {data.data.data[0].name}
       </h1>
+      <img src={data.data.data[0].image.src}></img>
+      
 
-      <button onClick={refetch}> Refetch</button>
+      <button onClick={ refetch }> Refetch</button>
+
+      <button onClick={ getFeaturedProduct }> getFeatured</button>
+
+      <h5>result</h5>
 
      {/*  <Navbar />
       <Line /> */}
