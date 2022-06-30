@@ -26,28 +26,27 @@ const Line = styled.hr`
 
 const Home = () => {
 
-  const { data: data, loading, error, refetch, getFeaturedProduct } = useFetch(
-    "https://technical-frontend-api.bokokode.com/api/products"
-  );
+  const { data: data, dataFilter, loading, error, refetch, getFeaturedProduct } = useFetch();
+
+  
 
   if (loading) return <h1> LOADING...</h1>;
 
   if (error) console.log(error);
-
-
-
-  return (
-
+  
+  else return (
 
     
     <Container>
-       <h1>
-        {data.data.data[0].name}
-      </h1>
-      <img src={data.data.data[0].image.src}></img>
-      
 
-      <button onClick={ refetch }> Refetch</button>
+   
+       <h1>
+        {data?.data.data[0].name}
+      </h1>
+      <img src={data?.data.data[0].image.src}></img>
+      { console.log( "dataFilter" , dataFilter) }
+
+      {/* <button onClick={ refetch }> Refetch</button> */}
 
       <button onClick={ getFeaturedProduct }> getFeatured</button>
 
